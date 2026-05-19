@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile - Campusly</title>
+    <link rel="stylesheet" href="/css/main.css"> <link rel="stylesheet" href="/css/profile.css"> 
+</head>
+<body class="dashboard-body">
+    <div class="profile-container">
+        
+        <aside class="profile-left-card">
+            <div class="avatar-wrapper">
+                <img src="/images/avatar-placeholder.png" alt="Profile Picture" class="profile-avatar">
+            </div>
+            <h2 class="user-display-name"><%= user.name %></h2>
+            <p class="user-meta-sub"><%= user.course %> • <%= user.semester %></p>
+
+            <div class="mini-stats-grid">
+                <div class="mini-stat-box">
+                    <span class="stat-num">12</span>
+                    <span class="stat-label">Products</span>
+                </div>
+                <div class="mini-stat-box">
+                    <span class="stat-num">8</span>
+                    <span class="stat-label">Sold</span>
+                </div>
+                <div class="mini-stat-box">
+                    <span class="stat-num">4.8</span>
+                    <span class="stat-label">Rating</span>
+                </div>
+                <div class="mini-stat-box">
+                    <span class="stat-num">24</span>
+                    <span class="stat-label">Chats</span>
+                </div>
+            </div>
+
+            <button class="btn-edit-profile">Edit Profile</button>
+        </aside>
+
+        <main class="profile-main-content">
+            <section class="details-section-card">
+                <h2 class="section-title">Student <span class="accent-text">Profile</span></h2>
+                
+                <div class="profile-fields-grid">
+                    <div class="info-data-block">
+                        <label>Full Name</label>
+                        <div class="field-value-box"><%= user.name %></div>
+                    </div>
+
+                    <div class="info-data-block">
+                        <label>Enrollment Number</label>
+                        <div class="field-value-box"><%= user.enrollmentNo %></div>
+                    </div>
+
+                    <div class="info-data-block">
+                        <label>Course</label>
+                        <div class="field-value-box"><%= user.course %></div>
+                    </div>
+
+                    <div class="info-data-block">
+                        <label>Semester</label>
+                        <div class="field-value-box"><%= user.semester %></div>
+                    </div>
+
+                    <div class="info-data-block wide-block">
+                        <label>Department</label>
+                        <div class="field-value-box"><%= user.department %></div>
+                    </div>
+
+                    <div class="info-data-block wide-block">
+                        <label>Email Address</label>
+                        <div class="field-value-box"><%= user.email %></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="recent-activity-card">
+                <h3>Recent Activity</h3>
+                <div class="activity-log-item">
+                    <div class="activity-details">
+                        <p class="activity-title">Engineering Mathematics Book</p>
+                        <span class="activity-time">Listed 2 hours ago</span>
+                    </div>
+                    <span class="status-pill active-pill">Active</span>
+                </div>
+            </section>
+        </main>
+
+    </div>
+</body>
+</html>
