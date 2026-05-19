@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Campus Listing Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      width: 400px;
+      margin: 40px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    button {
+      margin-top: 15px;
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Post Your Listing</h2>
+
+  <form method="POST" action="/seller">
+    <!-- Product Title -->
+    <label>Product Title</label>
+    <input type="text" name="productname" placeholder="e.g. Lab Coat" required>
+
+    <!-- Price -->
+    <label>Price (₹)</label>
+    <input type="number" name="price" placeholder="e.g. 500" required>
+
+    <!-- Category -->
+    <label>Category</label>
+    <select name="category" required>
+      <option value="">Select Category</option>
+      <option>Books</option>
+      <option>Electronics</option>
+      <option>Fashion</option>
+      <option>Furniture</option>
+      <option>Vehicles</option>
+      <option>Others</option>
+    </select>
+
+    <!-- Description -->
+    <label>Description</label>
+    <textarea rows="4" name="description" placeholder="Used for 1 semester, good condition..."></textarea>
+
+    <!-- Location -->
+    <label>Location</label>
+    <input type="text" name="location" placeholder="e.g. Vishwakarma Hostel">
+
+    <!-- Photo Upload -->
+    <label>Upload Photo</label>
+    <input type="file" name="photoUrl">
+
+    <!-- Submit -->
+    <button type="submit">Post My Listing</button>
+  </form>
+</div>
+
+</body>
+</html>

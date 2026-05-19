@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "ejs": "^5.0.1",
+    "express": "^5.2.1",
+    "mysql2": "^3.20.0",
+    "socket.io": "^4.8.3"
+  },
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "devDependencies": {
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^4.2.2"
+  },
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
